@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <main class="main">
+    <main class="container">
 
-        <img id = "a" src="icons/hito.png" draggable="false">
-        <input id = "hitomi" class="hitomi" placeholder="7 digitos" disabled type="number">
+        <div class="container-logo" id = "a">
+            <img class="img-hitomi" src="icon-svg/icon-hitomi.PNG" draggable="false">
+            <p class="names">Hitomi</p>
 
-        <div class="container-nhentai">
-            <img id = "b" class="img-nhentai" src="https://asset.brandfetch.io/iduGha3_LP/idK823tA0V.svg" draggable="false">
-            <p class="text-nhentai">Nhentai</p>
         </div>
 
-        <input id = "nhentai" class="nhentai" placeholder="5 o 6 digitos" disabled type="number">
+        <div class="container-input">
+            <input id = "hitomi" class="inputs" placeholder="7 digitos" disabled min="1" type="number">
+        </div>   
+        <div class="container-logo" id="b">
+            <img src="icon-svg/icon-nhentai.svg" draggable="false">
+            <p class="names">nhentai</p>
+        </div>
 
+        <div class="container-input">   
+            <input id = "nhentai" class="inputs" placeholder="5 o 6 digitos" disabled min="1" type="number">
+        </div>
+        <div class="container-btn">
+            <a href="#" class="btn" id="boton1">Buscar</a>
+            <a href="#"class="btn" id="boton2">Link</a>
+        </div>
 
-       
-
-        <h1></h1>
-
-        <input id = "boton1"  type="submit" value="Buscar">
-        <input id = "boton2"  type="submit" value="Link">
         
-        <h1></h1>
 
         <A id="campoLink"></A>
 

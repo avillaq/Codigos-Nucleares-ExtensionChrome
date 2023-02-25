@@ -1,25 +1,63 @@
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;	
+    background-color:#124178;
 }
 
 img{
-    width: 100%;
+    width: 50%;
+    display: block;
 }
-.main{
+.container{
     width: 180px;
     height: 250px;
     border: 2px solid #000;
     text-align: center;
 }
-.container-nhentai{
+.container-logo{
     background-color: #000;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
+    justify-content: center;
     padding: 5px 0;
     cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    margin: 5px 0;
 }
-.text-nhentai{
+.container-logo:hover{
+    background-color: #313131;
+}
+.container-logo .img-hitomi{
+    width: 25%;
+}
+.names{
     color: #fff;
     user-select: none;
+    margin: 0;
+    font-size: 20px;
 }
+.inputs{
+    outline: none;
+    width: 70%;
+    font-family: inherit;
+    border-radius: 5px;
+    padding: 5px 0;
+    padding-left: 10px;
+}
+/*Botones -> Buscar - Link*/
+.container-btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0;
+}
+.btn{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    background-color: #272727;
+    border-radius: 5px;
+}
+
+
