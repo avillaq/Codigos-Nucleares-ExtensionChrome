@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Codigos Nucleares</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div>
-        <img id = "a" src="icons/hito.png" draggable="false"></img>
+    <main class="main">
+
+        <img id = "a" src="icons/hito.png" draggable="false">
         <input id = "hitomi" class="hitomi" placeholder="7 digitos" disabled type="number">
 
-        <img id = "b" src="icons/nh.png" draggable="false"></img>
+        <div class="container-nhentai">
+            <img id = "b" class="img-nhentai" src="https://asset.brandfetch.io/iduGha3_LP/idK823tA0V.svg" draggable="false">
+            <p class="text-nhentai">Nhentai</p>
+        </div>
+
         <input id = "nhentai" class="nhentai" placeholder="5 o 6 digitos" disabled type="number">
+
+
+       
 
         <h1></h1>
 
@@ -23,10 +31,10 @@
         <h1></h1>
 
         <A id="campoLink"></A>
-        
-    </div>
 
-    <script src="content.js"></script>
+    </main>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    width: 100%;
+}
+.main{
+    width: 180px;
+    height: 250px;
+    border: 2px solid #000;
+    text-align: center;
+}
+.container-nhentai{
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.text-nhentai{
+    color: #fff;
+    user-select: none;
+}
