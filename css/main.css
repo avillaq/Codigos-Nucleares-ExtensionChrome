@@ -84,8 +84,15 @@ img{
     transform: scale(0.95);
 }
 
-/*slidedown*/
+/*slidedown inputs*/
 .container-input{
+    transition:height .3s ease-out;
+    height:0px;
+    overflow:hidden;
+    text-align: center;
+}
+/*slidedown link*/
+.container-link{
     transition:height .3s ease-out;
     height:0px;
     overflow:hidden;

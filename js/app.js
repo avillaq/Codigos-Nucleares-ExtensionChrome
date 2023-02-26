@@ -31,6 +31,18 @@ function init() {
     });
 
 
+    const btnShow = document.querySelector("#btnView");
+    btnShow.addEventListener('click', function(e){
+        e.preventDefault();
+        if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
+            slideLink("#container-link");
+
+        } else if (inputNhentai.value.length == 5 || inputNhentai.value.length == 6) {
+            slideLink("#container-link");
+        }
+    });
+
+
     /* Logos */
     const logoHitomi = document.querySelector("#container-logo-hitomi");
     const logoNhentai = document.querySelector("#container-logo-nhentai");
@@ -52,13 +64,24 @@ function init() {
     function slide(container_1,container_2){
         const container1 = document.querySelector(container_1);
         const container2 = document.querySelector(container_2);
-
+        
         if(container1.style.height==="" || container1.style.height==="0px"){
             container1.style.height = 30 +"px";
-            container2.style.height = 0 +"px";
+            container2.style.height = 0 +"px" ;
         }else{
             container1.style.height = 0 +"px";
         }
+    }
+    function slideLink(container){
+        const containerLink = document.querySelector(container);
+        if(containerLink.style.height==="" || containerLink.style.height==="0px"){
+            containerLink.style.height = 30 +"px";
+        }else{
+            containerLink.style.height = 0 +"px";
+
+        }
+
+
     }
 
 
