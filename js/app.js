@@ -40,15 +40,28 @@ function init() {
     const inputNhentai = document.querySelector("#input-nhentai");
 
     logoHitomi.addEventListener('click', function (){
-        document.querySelector(".input-hitomi").style.height = 30 +"px";
+        slide("#container-hitomi","#container-nhentai");
         inputHitomi.disabled = false;
         inputNhentai.disabled = true;
     });
     logoNhentai.addEventListener('click', function (){
-        document.querySelector(".input-nhentai").style.height = 30 +"px";
+        slide("#container-nhentai","#container-hitomi");
         inputHitomi.disabled = true;
         inputNhentai.disabled = false;
     });
+
+
+    function slide(container_1,container_2){
+        const container1 = document.querySelector(container_1);
+        const container2 = document.querySelector(container_2);
+
+        if(container1.style.height==="" || container1.style.height==="0px"){
+            container1.style.height = 30 +"px";
+            container2.style.height = 0 +"px";
+        }else{
+            container1.style.height = 0 +"px";
+        }
+    }
 
 
 }
