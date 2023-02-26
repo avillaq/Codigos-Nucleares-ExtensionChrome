@@ -11,7 +11,7 @@ img{
 }
 .container{
     width: 180px;
-    height: 250px;
+    height: 200px;
     border: 2px solid #000;
     text-align: center;
 }
@@ -60,4 +60,9 @@ img{
     border-radius: 5px;
 }
 
-
+/*slidedown*/
+.input-hitomi, .input-nhentai{
+    transition:height .3s ease-out;
+    height:0;
+    overflow:hidden;
+}

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', init);
 function init() {
-    const hitomi = document.querySelector(".hitomi")
+    /*const hitomi = document.querySelector(".hitomi")
     const nhentai = document.querySelector(".nhentai")
     const boton1 = document.getElementById('boton1');
 
@@ -29,29 +29,26 @@ function init() {
             document.getElementById('campoLink').innerHTML = 'https://nhentai.to/g/' + nhentai.value;
         }
     }
-    boton2.addEventListener('click', mostrarLink);
+    boton2.addEventListener('click', mostrarLink);*/
 
 
     //Habilita y deshabilita campos de texto
-    const a = document.getElementById('a');
-    const b = document.getElementById('b');
-    const h = document.getElementById('hitomi');
-    const nh = document.getElementById('nhentai');
-    function event1() {
-        h.disabled = false
-        nh.disabled = true
-    }
-    function event2() {
-        h.disabled = true
-        nh.disabled = false
-    }
-    a.addEventListener('click', event1);
-    b.addEventListener('click', event2);
+    const logoHitomi = document.querySelector("#container-logo-hitomi");
+    const logoNhentai = document.querySelector("#container-logo-nhentai");
 
+    const inputHitomi = document.querySelector("#input-hitomi");
+    const inputNhentai = document.querySelector("#input-nhentai");
 
-
-
-
+    logoHitomi.addEventListener('click', function (){
+        document.querySelector(".input-hitomi").style.height = 30 +"px";
+        inputHitomi.disabled = false;
+        inputNhentai.disabled = true;
+    });
+    logoNhentai.addEventListener('click', function (){
+        document.querySelector(".input-nhentai").style.height = 30 +"px";
+        inputHitomi.disabled = true;
+        inputNhentai.disabled = false;
+    });
 
 
 }
