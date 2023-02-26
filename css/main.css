@@ -11,9 +11,9 @@ img{
 }
 .container{
     width: 180px;
-    height: 200px;
+    height: 190px;
     border: 2px solid #000;
-    text-align: center;
+
 }
 .container-logo{
     background-color: #000;
@@ -55,7 +55,7 @@ img{
     text-decoration: none;
     color: #fff;
     display: inline-block;
-    padding: 5px;
+    padding: 7px;
     background-color: #272727;
     border-radius: 5px;
 }
@@ -65,4 +65,5 @@ img{
     transition:height .3s ease-out;
     height:0px;
     overflow:hidden;
+    text-align: center;
 }
