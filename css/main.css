@@ -3,18 +3,14 @@ body{
     margin: 0;
     padding: 0;	
     background-color:#124178;
+    width: 200px;
 }
 
 img{
     width: 50%;
     display: block;
 }
-.container{
-    width: 180px;
-    height: 190px;
-    border: 2px solid #000;
 
-}
 .container-logo{
     background-color: #000;
     display: flex;
@@ -22,12 +18,14 @@ img{
     justify-content: center;
     padding: 5px 0;
     cursor: pointer;
-    transition: background-color .2s ease-in-out;
-    margin: 5px 0;
+    transition: all .2s ease-in-out;
+    margin: 7px 0;
 }
 .container-logo:hover{
     background-color: #313131;
+    transform: scale(1.05);
 }
+
 .container-logo .img-hitomi{
     width: 25%;
 }
@@ -49,7 +47,7 @@ img{
 .container-btn{
     display: flex;
     justify-content: space-evenly;
-    margin: 5px 0;
+    margin: 10px 0 5px 0;
 }
 .btn{
     text-decoration: none;
@@ -60,10 +58,23 @@ img{
     border-radius: 5px;
 }
 
+.btn:active {
+    transform: scale(0.9);
+}
+
 /*slidedown*/
 .container-input{
     transition:height .3s ease-out;
     height:0px;
     overflow:hidden;
     text-align: center;
+}
+
+/* Footer*/
+footer p{
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding:7px 0;
+    color: #fff;
+    background-color: #003153;
 }

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', init);
 function init() {
+
     /** inputs */
     const inputHitomi = document.querySelector("#input-hitomi");
     const inputNhentai = document.querySelector("#input-nhentai");
 
-
-    const boton1 = document.getElementById('boton1');
-    boton1.addEventListener('click', function (e) {
+    const btnSearch = document.querySelector("#btnSearch");
+    btnSearch.addEventListener('click', function (e) {
         e.preventDefault();
         if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
             let win = window.open("https://hitomi.la/reader/" + inputHitomi.value + ".html#1", '_blank');
@@ -20,8 +20,8 @@ function init() {
 
     
     //Copia al portapapeles la url presionando el Copy Link
-    const boton2 = document.getElementById('boton2');
-    boton2.addEventListener('click', function(e){
+    const btnCopy = document.querySelector("#btnCopy");
+    btnCopy.addEventListener('click', function(e){
         e.preventDefault();
         if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
             navigator.clipboard.writeText("https://hitomi.la/reader/" + inputHitomi.value + ".html#1");
