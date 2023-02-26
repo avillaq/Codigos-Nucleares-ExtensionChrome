@@ -3,12 +3,33 @@ body{
     margin: 0;
     padding: 0;	
     background-color:#124178;
-    width: 200px;
+    width: 250px;
 }
 
 img{
     width: 50%;
     display: block;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #003153;
+}
+.header p{
+    font-family: inherit;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+}
+.info{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid #fff;  
+    border-radius: 50%;
 }
 
 .container-logo{
@@ -58,8 +79,9 @@ img{
     border-radius: 5px;
 }
 
+/*Efecto al ser precionado los botones*/
 .btn:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 /*slidedown*/
