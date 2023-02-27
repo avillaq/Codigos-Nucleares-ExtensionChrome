@@ -19,7 +19,7 @@ function init() {
         }
     });
     
-    //Copia al portapapeles la url presionando el Copy Link
+    /**Copia al portapapeles la url presionando el Copy Link */
     const btnCopy = document.querySelector("#btnCopy");
     btnCopy.addEventListener('click', function(e){
         e.preventDefault();
