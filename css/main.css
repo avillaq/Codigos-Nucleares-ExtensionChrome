@@ -5,12 +5,10 @@ body {
     background-color: #124178;
     width: 280px;
 }
-
 img {
     width: 30%;
     display: block;
 }
-
 .header {
     display: flex;
     justify-content: space-around;
