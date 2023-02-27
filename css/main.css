@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;	
     background-color:#124178;
-    width: 250px;
+    width: 280px;
 }
 
 img{
@@ -43,7 +43,7 @@ img{
     margin: 7px 0;
 }
 .container-logo:hover{
-    background-color: #313131;
+    /*background-color: #313131;*/
     transform: scale(1.05);
 }
 
@@ -93,10 +93,18 @@ img{
 }
 /*slidedown link*/
 .container-link{
-    transition:height .3s ease-out;
+    /*transition: height .3s ease-out;
     height:0px;
-    overflow:hidden;
+    overflow:hidden;*/
     text-align: center;
+} 
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 7px;
+    font-size: 13px;
 }
 
 /* Footer*/

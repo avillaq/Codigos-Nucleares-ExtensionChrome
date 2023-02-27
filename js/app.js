@@ -5,14 +5,17 @@ function init() {
     const inputHitomi = document.querySelector("#input-hitomi");
     const inputNhentai = document.querySelector("#input-nhentai");
 
+
+    /**Abre una una pestaña en el navegador*/
     const btnSearch = document.querySelector("#btnSearch");
     btnSearch.addEventListener('click', function (e) {
         e.preventDefault();
-        if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
+
+        if ((inputHitomi.value.length===5 || inputHitomi.value.length===7) && inputHitomi.classList.contains("slided") ) {
             let win = window.open("https://hitomi.la/reader/" + inputHitomi.value + ".html#1", '_blank');
             win.focus();
 
-        } else if (inputNhentai.value.length == 5 || inputNhentai.value.length == 6) {
+        } else if ((inputNhentai.value.length === 5 || inputNhentai.value.length === 6) && inputNhentai.classList.contains("slided")) {
             let win = window.open('https://nhentai.to/g/' + inputNhentai.value, '_blank');
             win.focus();
         }
@@ -23,25 +26,28 @@ function init() {
     const btnCopy = document.querySelector("#btnCopy");
     btnCopy.addEventListener('click', function(e){
         e.preventDefault();
-        if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
+        if ((inputHitomi.value.length===5 || inputHitomi.value.length===7) && inputHitomi.classList.contains("slided")) {
             navigator.clipboard.writeText("https://hitomi.la/reader/" + inputHitomi.value + ".html#1");
-        } else if (inputNhentai.value.length == 5 || inputNhentai.value.length == 6) {
+        } else if ((inputNhentai.value.length === 5 || inputNhentai.value.length === 6) && inputNhentai.classList.contains("slided")) {
             navigator.clipboard.writeText('https://nhentai.to/g/' + inputNhentai.value);
         }
     });
 
 
+    /**Muestra el link */
     const btnShow = document.querySelector("#btnView");
     btnShow.addEventListener('click', function(e){
         e.preventDefault();
-        if (inputHitomi.value.length === 5 || inputHitomi.value.length === 7) {
-            slideLink("#container-link");
+        const link = document.querySelector("#link");
+        if ((inputHitomi.value.length===5 || inputHitomi.value.length===7) && inputHitomi.classList.contains("slided")) {
+            link.href = "https://hitomi.la/reader/" + inputHitomi.value + ".html#1";
+            link.innerHTML = "https://hitomi.la/reader/" + inputHitomi.value + ".html#1";
 
-        } else if (inputNhentai.value.length == 5 || inputNhentai.value.length == 6) {
-            slideLink("#container-link");
+        } else if ((inputNhentai.value.length === 5 || inputNhentai.value.length === 6) && inputNhentai.classList.contains("slided")) {
+            link.href = 'https://nhentai.to/g/' + inputNhentai.value;
+            link.innerHTML = 'https://nhentai.to/g/' + inputNhentai.value;
         }
     });
-
 
     /* Logos */
     const logoHitomi = document.querySelector("#container-logo-hitomi");
@@ -52,12 +58,19 @@ function init() {
         slide("#container-hitomi","#container-nhentai");
         inputHitomi.disabled = false;
         inputNhentai.disabled = true;
+
+        inputHitomi.classList.add("slided");
+        inputNhentai.classList.remove("slided");
+
     });
     /**Eventos para los logos */
     logoNhentai.addEventListener('click', function (){
         slide("#container-nhentai","#container-hitomi");
         inputHitomi.disabled = true;
         inputNhentai.disabled = false;
+
+        inputNhentai.classList.add("slided");
+        inputHitomi.classList.remove("slided");
     });
 
 
@@ -68,6 +81,7 @@ function init() {
         if(container1.style.height==="" || container1.style.height==="0px"){
             container1.style.height = 30 +"px";
             container2.style.height = 0 +"px" ;
+            
         }else{
             container1.style.height = 0 +"px";
         }
