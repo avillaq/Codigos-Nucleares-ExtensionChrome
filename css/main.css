@@ -9,6 +9,7 @@ img {
     width: 30%;
     display: block;
 }
+/* Header side */
 .header {
     display: flex;
     justify-content: space-around;
@@ -16,7 +17,6 @@ img {
     padding: 10px 0;
     background-color: #003153;
 }
-
 .header p {
     font-family: inherit;
     color: #fff;
@@ -24,7 +24,7 @@ img {
     font-size: 18px;
     margin: 0;
 }
-
+/* Icono de ! */
 .info {
     width: 25px;
     height: 25px;
@@ -33,11 +33,12 @@ img {
     border-radius: 50%;
 }
 
+/*Contenedor del tooltip*/
 .tooltip {
     position: relative;
     display: inline-block;
 }
-
+/*Ventana de texto oculta*/
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 150px;
@@ -54,7 +55,7 @@ img {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
+/*indicador de la ventada */
 .tooltip .tooltiptext::before {
     content: "";
     position: absolute;
@@ -72,6 +73,7 @@ img {
     opacity: 1;
 }
 
+/* Logo*/
 .container-logo {
     background-color: #000;
     display: flex;
@@ -84,21 +86,20 @@ img {
 }
 
 .container-logo:hover {
-    /*background-color: #313131;*/
     transform: scale(1.05);
 }
-
+/*Imagen de logo hitomi*/
 .container-logo .img-hitomi {
     width: 15%;
 }
-
+/*Texto en el logo de cada pagina*/
 .names {
     color: #fff;
     user-select: none;
     margin: 0;
     font-size: 20px;
 }
-
+/*Estilos para los 2 inputs*/
 .inputs {
     outline: none;
     width: 70%;
@@ -108,7 +109,7 @@ img {
     padding-left: 10px;
 }
 
-/*Botones -> Buscar - Link*/
+/*Botones -> Search - Link - Copy*/
 .container-btn {
     display: flex;
     justify-content: space-evenly;
@@ -145,6 +146,7 @@ img {
     text-align: center;
 }
 
+/*Enlace*/
 .link {
     display: inline-block;
     text-decoration: none;

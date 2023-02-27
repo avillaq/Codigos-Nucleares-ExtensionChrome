@@ -5,14 +5,10 @@ function init() {
     const inputHitomi = document.querySelector("#input-hitomi");
     const inputNhentai = document.querySelector("#input-nhentai");
 
-
-
     /**Abre una una pestaña en el navegador*/
     const btnSearch = document.querySelector("#btnSearch");
     btnSearch.addEventListener('click', function (e) {
         e.preventDefault();
-        
-
         if (condition("hitomi")) {
             let win = window.open("https://hitomi.la/reader/" + inputHitomi.value + ".html#1", '_blank');
             win.focus();
@@ -22,15 +18,11 @@ function init() {
             win.focus();
         }
     });
-
     
     //Copia al portapapeles la url presionando el Copy Link
     const btnCopy = document.querySelector("#btnCopy");
     btnCopy.addEventListener('click', function(e){
         e.preventDefault();
-        
-        console.log(condition("hitomi"));
-
         if (condition("hitomi")) {
             navigator.clipboard.writeText("https://hitomi.la/reader/" + inputHitomi.value + ".html#1");
         } else if (condition("nhentai")) {
@@ -38,12 +30,11 @@ function init() {
         }
     });
 
-
-    /**Muestra el link */
-    const btnShow = document.querySelector("#btnView");
-    btnShow.addEventListener('click', function(e){
+    /**Muestra el enlace a la pagina */
+    const btnLink = document.querySelector("#btnLink");
+    const link = document.querySelector("#link");
+    btnLink.addEventListener('click', function(e){
         e.preventDefault();
-        const link = document.querySelector("#link");
         if (condition("hitomi")) {
             link.href = "https://hitomi.la/reader/" + inputHitomi.value + ".html#1";
             link.innerHTML = "https://hitomi.la/reader/" + inputHitomi.value + ".html#1";
@@ -61,36 +52,35 @@ function init() {
     /**Eventos para los logos */
     logoHitomi.addEventListener('click', function (){
         slide("#container-hitomi","#container-nhentai");
-        inputHitomi.disabled = false;
-        inputNhentai.disabled = true;
-
-        inputHitomi.classList.add("slided");
-        inputNhentai.classList.remove("slided");
-
+        disable_add_remove(inputHitomi, inputNhentai);
     });
     /**Eventos para los logos */
     logoNhentai.addEventListener('click', function (){
         slide("#container-nhentai","#container-hitomi");
-        inputHitomi.disabled = true;
-        inputNhentai.disabled = false;
-
-        inputNhentai.classList.add("slided");
-        inputHitomi.classList.remove("slided");
+        disable_add_remove(inputNhentai, inputHitomi);
     });
 
-
+    /* Slidedown  y slideup*/ 
     function slide(container_1,container_2){
         const container1 = document.querySelector(container_1);
         const container2 = document.querySelector(container_2);
-        
+
         if(container1.style.height==="" || container1.style.height==="0px"){
             container1.style.height = 30 +"px";
             container2.style.height = 0 +"px" ;
-            
         }else{
             container1.style.height = 0 +"px";
         }
     }
+
+    /**Desabilitar inputs y añadir la clase slided */
+    function disable_add_remove(input1, input2){
+        input1.disabled = false;
+        input2.disabled = true;
+        input1.classList.add("slided");
+        input2.classList.remove("slided");
+    }
+
     /* Condiciones para que los botones funciones*/
     function condition(name){
         switch (name) {
